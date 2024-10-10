@@ -4,7 +4,8 @@ import GraphVisualizer from './components/GraphVisualizer';
 import { Package } from 'lucide-react';
 
 const App: React.FC = () => {
-  const [graph, setGraph] = useState<Graph>(new Graph(5));
+  const distributionCenterCount = 6;
+  const [graph, setGraph] = useState<Graph>(new Graph(distributionCenterCount));
   const [source, setSource] = useState<number>(0);
   const [target, setTarget] = useState<number>(4);
   const [result, setResult] = useState<{ path: number[]; distance: number } | null>(null);

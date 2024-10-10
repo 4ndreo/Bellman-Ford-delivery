@@ -23,7 +23,8 @@ export class Graph {
   getVerticesCount(): number {
     return this.vertices;
   }
-
+  
+  // Método para encontrar la ruta menos costosa
   bellmanFord(source: number): { distances: number[]; predecessors: number[] } {
     const distances: number[] = new Array(this.vertices).fill(Infinity);
     const predecessors: number[] = new Array(this.vertices).fill(-1);
@@ -77,7 +78,7 @@ export class Graph {
     return path;
   }
 
-  // Nuevo método para encontrar la ruta más rápida
+  // Método para encontrar la ruta más rápida
   dijkstra(source: number): { times: number[]; predecessors: number[] } {
     const times: number[] = new Array(this.vertices).fill(Infinity);
     const predecessors: number[] = new Array(this.vertices).fill(-1);
