@@ -23,10 +23,12 @@ export class Graph {
   getVerticesCount(): number {
     return this.vertices;
   }
-  
+
   // Método para encontrar la ruta menos costosa
   bellmanFord(source: number): { distances: number[]; predecessors: number[] } {
+    // Todas las distancias comienzan en infinito respecto al origen
     const distances: number[] = new Array(this.vertices).fill(Infinity);
+    // Todos los nodos predecesores comienzan en -1 respecto al origen
     const predecessors: number[] = new Array(this.vertices).fill(-1);
     distances[source] = 0;
 

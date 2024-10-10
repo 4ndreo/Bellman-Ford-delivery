@@ -28,6 +28,7 @@ export class PriorityQueue<T> {
     return this.heap.length === 0;
   }
 
+  // Aumenta la prioridad de un elemento hasta que ocupe el lugar correcto
   private bubbleUp(index: number): void {
     while (index > 0) {
       const parentIndex = Math.floor((index - 1) / 2);
@@ -40,6 +41,7 @@ export class PriorityQueue<T> {
     }
   }
 
+  // Aumenta la prioridad de un elemento hasta que ocupe el lugar correcto
   private bubbleDown(index: number): void {
     while (true) {
       const leftChildIndex = 2 * index + 1;
